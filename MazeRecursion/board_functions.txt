@@ -1,0 +1,38 @@
+board.checkIndex(x, y)
+- returns a boolean (True/False)
+- checks if Index is possible within maze and if index is on a wall
+
+board.E
+- the coordinates for the End of the Maze
+
+board.pos
+- our current coordinates within the maze
+
+updateData(board, x, y)
+- updates our board with any new changes to coordinates
+
+board.remove(x, y)
+- removes character at inputted index of the maze
+
+print(board)
+- prints board in grid format
+
+. . . . . . . . . . . . . . . . . . 
+sys.exit()
+- will crash your program on command
+
+time.sleep(s)
+- takes integer amount of seconds as a parameter
+- will pause program for inputted amount of
+
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+== checks if two values are the same
+  Ex: 2 + 2 == 4 --> True
+
+# if statements (Conditionals)
+if (condition):
+  this INDENTED code will run if the condition is True
+
+# Defining functions
+def nameOfFunction(input1, input2):
+  indented code of the function

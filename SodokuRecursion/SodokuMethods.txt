@@ -1,0 +1,106 @@
+self.isValid()
+- Checks if current Sudoku Board follows rules of Sudoku
+
+self.isSolved()
+- Checks if current Sudoku Board follows rules of Sudoku AND has correct amount of numbers in each row, square, and column
+
+self.gameBoard[x][y]
+- Returns number at inputted index of board
+
+self.place(int x, int y, int val)
+- Places inputted value in board at inputted x and y coordinates
+
+self.remove(int x, int y)
+- Removes value in board at inputted x and y coordinates
+
+print(self)
+- Prints Board
+
+- - - - - - - - - - - - - - - -
+
+Iterating through the board:
+for r in range(9):
+  for c in range(9):
+
+Checking if two values are equal:
+2 + 2 == 4      -> True
+2 + 3 == 4      -> False
+not 2 + 3 == 4  -> True
+not 2 + 3 == 5  -> False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SOLUTION SPOILERS:
+
+
+
+
+
+
+
+
+def solve(self):
+    print(self)
+    # Conditions
+    if (not self.isValid()):
+      return False
+    # Base Case
+    if (self.isSolved()):
+      return True
+    else:
+      # Recursive Cases
+      # Iterate Row by Row
+      for r in range(9):
+        # Iterate Num by Num
+        for c in range(9):
+          # Value that we will TRY to add
+          for val in range(1, 10):
+            # Only make changes to empty spaces
+            if (self.gameBoard[r][c] == '.'):
+              # insert Value into the board
+              self.place(r, c, str(val))
+              if (self.solve()):
+                return True
+              self.remove(r, c)

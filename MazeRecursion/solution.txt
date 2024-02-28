@@ -1,0 +1,131 @@
+NOTE: This solution will not make much sense without context
+      Also, this has spoilers for the lesson, but to each their
+      own, y'know
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def solve(board, x, y):
+    if (board.checkIndex(x, y)):
+      updateData(board, x, y)
+      time.sleep(0.5)
+        # Base Case
+      if (board.pos == board.E):
+        sys.exit()
+      # Recursive Cases
+      else:
+          # Move right
+        solve(board, x, y + 1)
+          # Move left
+        solve(board, x, y - 1)
+          # Move down
+        solve(board, x + 1, y)
+          # Move up
+        solve(board, x - 1, y)
+    else:
+      board.remove(x, y)
+#    print(board)
+
+solve(board, 1, 1)
